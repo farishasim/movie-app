@@ -30,8 +30,8 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::resource('movies', MovieController::class)
-    ->only(['index']);
+Route::get('/movies/', [MovieController::class, 'index'])->name('movies.index');
+Route::get('/movies/{category}', [MovieController::class, 'index_cat'])->name('movies.index_cat');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

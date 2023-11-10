@@ -42,4 +42,13 @@ class MovieController extends Controller
         ]);
         // return json_decode($response->getBody());
     }
+
+    public function index_cat(string $category)
+    {
+        $response = $this->fetch("https://api.themoviedb.org/3/movie/${category}?language=en-US&page=1");
+
+        return Inertia::render('Movies/Category', [
+            'response' => $response,
+        ]);
+    }
 }
