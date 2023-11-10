@@ -14,13 +14,14 @@ defineProps(['response']);
     <HomeLayout>
         <div class="m-10">
             <h3 class="text-xl font-semibold text-gray-800">Now Playing</h3>
-            <div class="flex flex-wrap justify-start space-x-4 pt-4">
-                <Card 
+            <div class="flex flex-wrap justify-start pt-4">
+                <Card class="m-2"
                 v-for="(card, index) in response.results"
                 :key="index"
                 :title="card.title"
                 :description="card.description"
                 :imageSrc="`https://image.tmdb.org/t/p/w500/${card.poster_path}`"
+                :id="card.id"
                 />
             </div>
         </div>

@@ -51,4 +51,13 @@ class MovieController extends Controller
             'response' => $response,
         ]);
     }
+
+    public function detail(string $id)
+    {
+        $response = $this->fetch("https://api.themoviedb.org/3/movie/${id}?language=en-US");
+
+        return Inertia::render('Movies/Detail', [
+            'movie' => $response,
+        ]);
+    }
 }

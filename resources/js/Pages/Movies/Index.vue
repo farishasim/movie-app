@@ -26,6 +26,7 @@ defineProps(['now_playing', 'popular', 'top_rated', 'upcoming']);
                 :title="card.title"
                 :description="card.description"
                 :imageSrc="`https://image.tmdb.org/t/p/w500/${card.poster_path}`"
+                :id="card.id"
                 />
             </div>
         </div>
@@ -43,6 +44,7 @@ defineProps(['now_playing', 'popular', 'top_rated', 'upcoming']);
                 :title="card.title"
                 :description="card.description"
                 :imageSrc="`https://image.tmdb.org/t/p/w500/${card.poster_path}`"
+                :id="card.id"
                 />
             </div>
         </div>
@@ -60,6 +62,7 @@ defineProps(['now_playing', 'popular', 'top_rated', 'upcoming']);
                 :title="card.title"
                 :description="card.description"
                 :imageSrc="`https://image.tmdb.org/t/p/w500/${card.poster_path}`"
+                :id="card.id"
                 />
             </div>
         </div>
@@ -77,6 +80,7 @@ defineProps(['now_playing', 'popular', 'top_rated', 'upcoming']);
                 :title="card.title"
                 :description="card.description"
                 :imageSrc="`https://image.tmdb.org/t/p/w500/${card.poster_path}`"
+                :id="card.id"
                 />
             </div>
         </div>

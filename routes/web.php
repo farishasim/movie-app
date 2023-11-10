@@ -32,6 +32,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/movies/', [MovieController::class, 'index'])->name('movies.index');
 Route::get('/movies/{category}', [MovieController::class, 'index_cat'])->name('movies.index_cat');
+Route::get('/movies/detail/{id}', [MovieController::class, 'detail'])->name('movies.detail');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
